@@ -4,9 +4,7 @@ import { useRouter } from 'next/navigation';
 const Hero = () => {
   const router = useRouter();
 
-  const Toproduct= ()=>{
-    router.push('/app/products')
-  }
+  
 
 
   return (
@@ -32,7 +30,7 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button 
-            onClick={Toproduct}
+           onClick={() => router.push('/products')}
             className="px-8 py-3 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg transition-all shadow-lg"
           >
             Browse Inventory
@@ -48,8 +46,12 @@ const Hero = () => {
 
       {/* Subtle Bottom Fade */}
       <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-white to-transparent dark:from-gray-900"></div>
+      <div>
+
+      </div>
     </section>
+  
   );
 };
 
-export default Hero;
+export default Hero;  
